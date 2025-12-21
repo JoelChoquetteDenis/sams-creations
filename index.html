@@ -11,10 +11,22 @@
 </head>
 
 <body>
-    <nav>
+    <header>
+        <a class="logo-link" href="index.html"><img class="logo" src="images/logo.jpg"></a>
+        <a href="" class="btn-choco-jour">CHOCO DU JOUR</a>
+        <script>
+            const dateDebut = new Date('2025-12-23T03:00:00');
+            const dateAujrd = new Date();
 
-    </nav>
+            const deltaDate = Math.floor((dateAujrd - dateDebut) / (24 * 60 * 60 * 1000));
+
+            document.querySelector('.btn-choco-jour').href = `card.html?j=${deltaDate}`;
+        </script>
+    </header>
+    <hr>
     <main>
+        <h1>Cliquer sur une carte :</h1>
+
         <ul class="card-container">
             <li class="card">
                 <a href="card.html?j=0"><img src="images/cards/0.png"></a>
@@ -48,8 +60,10 @@
             </li>
         </ul>
     </main>
+    <hr>
     <footer>
-
+        <a class="logo-link" href="index.html"><img class="logo" src="images/logo.jpg"></a>
+        <small class="copyrights">Sam's creations © 2025 - Site web conçu par Joël Choquette-Denis</small>
     </footer>
 </body>
 

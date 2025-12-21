@@ -10,7 +10,20 @@ const objS = document.querySelector('.s');
 const objSl = document.querySelector('.sl');
 
 document.querySelector('.img').src = `images/microscope/${i}.png`;
-document.querySelectorAll('span.d').forEach(elem => {elem.textContent = d});
+document.querySelectorAll('.d').forEach(elem => {elem.textContent = d});
+
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+prev.href = `card.html?j=${i - 1}`;
+next.href = `card.html?j=${d}`;
+
+if (i === 0) {
+    prev.style.display = 'none';
+}
+else if (i === 9) {
+    next.style.display = 'none';
+}
 
 switch (i) {
     case 0:

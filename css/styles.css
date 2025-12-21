@@ -25,6 +25,10 @@
 }
 
 /* GLOBAL */
+hr {
+    border-color: var(--color-gold);
+}
+
 h1, h2 {
     font-family: 'BBH Bartle', sans-serif;
 }
@@ -38,7 +42,7 @@ h2 {
     color: var(--color-gold);
 }
 
-main {
+header, main, footer {
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -53,17 +57,64 @@ p {
     text-align: justify;
 }
 
+/* HEADER */
+header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn-choco-jour, .btn-choco-jour:link, .btn-choco-jour:visited {
+    border: 2px solid var(--color-gold);
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+
+    background-color: var(--color-old-gold);
+    color: var(--color-text);
+
+    font-family: 'BBH Hegarty', sans-serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    align-items: center;
+}
+
+.pages-nav-footer {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+
+.prev:link, .prev:visited, .next:link, .next:visited {
+    color: var(--color-text);
+}
+
+.copyrights {
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.25;
+}
+
 /* HOME */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5em;
+    gap: 20px;
     list-style: none;
 }
 
 .card {
-    width: 20em;
+    width: calc(50% - 10px);
     aspect-ratio: 2 / 3;
 }
 
@@ -102,6 +153,10 @@ p {
 }
 
 @media (min-width: 650px) {
+    .card {
+        width: calc(33% - 15px);
+    }
+
     .presentation {
         flex-direction: row;
         align-items: flex-end;
@@ -119,7 +174,11 @@ p {
         font-size: 24px;
     }
 
-    main {
+    header {
+        flex-direction: row;
+    }
+
+    header, main, footer {
         margin: 50px;
     }
 }
@@ -129,17 +188,19 @@ p {
         font-size: 16px;
     }
 
-    main {
+    header, main, footer {
         margin: 100px;
+        gap: 50px;
+    }
+
+    .card {
+        width: calc(25% - 20px);
     }
 
     .presentation, .pres-info {
         gap: 25px;
     }
 
-    main{
-        gap: 50px;
-    }
 
     h1 {
         font-size: 48px;
@@ -147,5 +208,9 @@ p {
 
     h2 {
         font-size: 32px;
+    }
+
+    .copyrights {
+        font-size: 16px;
     }
 }
