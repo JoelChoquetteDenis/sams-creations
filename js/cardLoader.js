@@ -9,7 +9,7 @@ const arrP = document.querySelectorAll('.p');
 const objS = document.querySelector('.s');
 const objSl = document.querySelector('.sl');
 
-document.querySelector('.img').src = `images/microscope/${i}.png`;
+document.querySelector('.img').src = `images/microscope/${i}.jpg`;
 document.querySelectorAll('.d').forEach(elem => {elem.textContent = d});
 
 const prev = document.querySelector('.prev');
